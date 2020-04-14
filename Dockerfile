@@ -6,9 +6,9 @@ ENV KAFKA_HOME=/docker-kafka-home
 
 WORKDIR /docker-kafka-home
 
-RUN curl -O https://www-eu.apache.org/dist/kafka/${KAFKA_VERSION}/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz && \
+RUN curl -O https://archive.apache.org/dist/kafka/${KAFKA_VERSION}/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz && \
     tar --strip-components=1 -xvzf kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz && \
-    rm -rf kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz site-docs
+    rm -r kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz site-docs
 
 VOLUME ["/kafka"]
 
