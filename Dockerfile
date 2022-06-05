@@ -1,7 +1,7 @@
 FROM openjdk:11-jre
 
-ENV KAFKA_VERSION=2.2.0
-ENV SCALA_VERSION=2.12
+ENV KAFKA_VERSION=3.2.0
+ENV SCALA_VERSION=2.13
 ENV KAFKA_HOME=/docker-kafka-home
 
 WORKDIR /docker-kafka-home
